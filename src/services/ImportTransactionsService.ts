@@ -42,6 +42,8 @@ class ImportTransactionsService {
       }),
     );
 
+    await fs.promises.unlink(file.path);
+
     return transactions;
   }
 }
